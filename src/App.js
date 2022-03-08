@@ -7,7 +7,7 @@ function App() {
    <div>
        <Switch>
 
-         <Route exact path='/'>
+         <Route path='/'>
          <Notes/>
          </Route>
 
