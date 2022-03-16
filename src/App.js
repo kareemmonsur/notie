@@ -1,15 +1,18 @@
 import {Switch, Route} from 'react-router-dom'
-import Notes from './pages/Notes'
+// import Notes from './pages/Notes'
 import Create from './pages/Create'
+import {BrowserRouter} from 'react-router-dom'
 
 function App() {
   return (
+
    <div>
+     <BrowserRouter>
        <Switch>
 
-         <Route path='/'>
+         {/* <Route exact path='/'>
          <Notes/>
-         </Route>
+         </Route> */}
 
          <Route path='/create'>
          <Create/>
@@ -17,6 +20,7 @@ function App() {
 
          
        </Switch>
+       </BrowserRouter>
      
    </div>
     
