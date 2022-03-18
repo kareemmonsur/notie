@@ -24,15 +24,16 @@ function Create() {
           variant="outlined" 
           helperText="Please enter your note title" 
           fullWidth 
-          required 
         />
 
         <TextField 
-          label="NoteTitle" 
+          label="Details" 
           variant="outlined" 
-          helperText="Please enter your note title" 
+          helperText="Please enter your note details" 
           fullWidth 
           required 
+          multiline
+          rows={'10'}
         />
 
 
