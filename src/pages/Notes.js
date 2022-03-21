@@ -54,12 +54,6 @@ function Notes() {
             <Paper> Birthday Present </Paper>
           </Grid> */}
 
-
-
-          
-
-
-
     </Grid>
   </Container>
   )

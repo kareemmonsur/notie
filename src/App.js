@@ -1,24 +1,26 @@
 import {Switch, Route, BrowserRouter} from 'react-router-dom'
 import Notes from './pages/Notes'
 import Create from './pages/Create'
+import Layout from './components/Layout';
 
 function App() {
   return (
 
    <div>
      <BrowserRouter>
-       <Switch>
- 
-         <Route exact path='/'>
-         <Notes/>
-         </Route>
+     <Layout>
+        <Switch>
+          <Route exact path='/'>
+          <Notes/>
+          </Route>
 
-         <Route path='/create'>
-         <Create/>
-         </Route>
+          <Route path='/create'>
+          <Create/>
+          </Route> 
+        </Switch>
 
-         
-       </Switch>
+     </Layout>
+       
        </BrowserRouter>
      
    </div>
