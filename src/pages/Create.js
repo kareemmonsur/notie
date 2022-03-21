@@ -1,6 +1,5 @@
 import React from 'react'
-import { TextField, Typography, Box } from '@mui/material'
-import { Button, Container, FormControl, FormLabel, RadioGroup, FormControlLabel, Radio } from '@mui/material'
+import { Button, Container, FormControl, FormLabel, RadioGroup, FormControlLabel, Radio, TextField, Typography, Box } from '@mui/material'
 
 
 function Create() {
@@ -32,7 +31,7 @@ function Create() {
           fullWidth 
           required 
           multiline
-          rows={'10'}
+          rows={'5'}
         />
 
       <FormControl>
@@ -51,11 +50,9 @@ function Create() {
 
     </Box>
 
-      
-      
 
       <Button
-      type='submit'
+      type='submit'  
       color='secondary'
       variant='contained'
       

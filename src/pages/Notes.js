@@ -1,30 +1,93 @@
-import { Button, Container, Typography } from '@mui/material'
+import {Grid, Container} from '@mui/material'
 import React from 'react'
+// import NoteCard from '../components/NoteCard'
+import {Card, CardHeader, Avatar, IconButton, CardContent, Typography } from '@mui/material';
+import { red } from '@mui/material/colors';
+import { DeleteOutlined } from '@material-ui/icons';
+
+
+
 
 function Notes() {
   return (
-    <Container
-    fixed
-    >
-      <Typography
-       variant='h6'
-       color='textSecondary'
-       component='h2'
-       gutterBottom
-      >
-      Noted, got it
-      </Typography>
-
-      <Button
-      onClick={() => console.log('clicked!')}
-      type='submit'
-      color='secondary'
-      variant='contained'
-      >
-        Submit
-      </Button>
+    <Container>
+      <Grid container spacing={1}>
+      <Grid item xs={12} sm={6} md={3}>
       
-    </Container>
+       <Card sx={{ maxWidth: 345 }}>
+          <CardHeader
+            avatar={
+              <Avatar sx={{ bgcolor: red[500] }} aria-label="recipe">
+                B
+              </Avatar>
+            }
+            action={
+              <IconButton aria-label="settings">
+                  <DeleteOutlined/>
+              </IconButton>
+            }   
+            title="Birthday cake"
+            subheader="September 14, 2016"
+          />
+             <CardContent>
+                  <Typography variant="body1" color="text.primary">
+                    This impressive paella is a perfect party dish and a fun meal to cook
+                    together with your guests. Add 1 cup of frozen peas along with the mussels,
+                    if you like.
+                  </Typography>
+            </CardContent>
+       </Card>
+       </Grid>
+
+
+       <Card sx={{ maxWidth: 345 }}>
+          <CardHeader
+            avatar={
+              <Avatar sx={{ bgcolor: red[500] }} >
+                B
+              </Avatar>
+            }
+            action={
+              <IconButton aria-label="settings">
+                  <DeleteOutlined/>
+              </IconButton>
+            }   
+            title="Birthday cake"
+            subheader="September 14, 2016"
+          />
+             <CardContent>
+                  <Typography variant="body2" color="text.secondary">
+                    This impressive paella is a perfect party dish and a fun meal to cook
+                    together with your guests. Add 1 cup of frozen peas along with the mussels,
+                    if you like.
+                  </Typography>
+            </CardContent>
+       </Card>
+
+      {/* <Grid container spacing={2}>
+          <Grid item xs={12} sm={6} md={3}>
+            <Paper> Birthday cake </Paper>
+          </Grid> */}
+
+
+          {/* <Grid item xs={12} sm={6} md={3}>
+            <Paper> Complete your training course </Paper>
+          </Grid>
+          <Grid item xs={12} sm={6} md={3}>
+            <Paper> Order pizza</Paper>
+          </Grid>
+          <Grid item xs={12} sm={6} md={3}>
+            <Paper> Birthday Present </Paper>
+          </Grid> */}
+
+
+
+          {/* <NoteCard/> */}
+
+
+
+    </Grid>
+  </Container>
   )
 }
 
