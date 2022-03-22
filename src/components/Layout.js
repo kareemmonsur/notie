@@ -1,26 +1,40 @@
-import { Typography, Drawer, Box} from '@mui/material';
+import { Typography, Drawer, makeStyles } from '@mui/material';
 import React from 'react'
 
-function Layout({children}) {
+
 
     const drawerWidth = 240;
+
+    const useStyles = makeStyles({
+    page: {
+      background: "#f9f9f9",
+      width: "100%"
+    },
+    drawer: {
+      width: drawerWidth
+    },
+    drawerPaper: {
+      width: drawerWidth
+    },
+    root: {
+      display: 'flex'
+    }
+
+  })
+
+  function Layout({children}) {
+  const classes = useStyles()
   return (
-    <div>
+    <div className={classes.root}>
         {/* App bar */}
 
         {/* side bar */}
         <Drawer
+        className={classes.drawer}
         variant='permanent'
         anchor='left'
-         sx={{
-            width: drawerWidth,
-            flexShrink: 0,
-            '& .MuiDrawer-paper': {
-              width: drawerWidth,
-              boxSizing: 'border-box',
-              
-            },
-         }}
+        classes={{paper: classes.drawerPaper}}
+      
         >
             <div>
                 <Typography variant='h5'>
